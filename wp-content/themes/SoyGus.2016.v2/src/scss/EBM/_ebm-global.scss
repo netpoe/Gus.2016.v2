@@ -1,0 +1,315 @@
+$header-height-control: 70px;
+$logo-width-control: 132px;
+@mixin attribute-hover {
+	@include position(absolute, -180% null null null);
+	font-size: rem(10px);
+	border-radius: 2px;
+	background: black;
+	padding: 2.5px;
+	line-height: 1;
+	color: white;
+	z-index: 900;
+	
+	display: none;
+}
+@include keyframes(bounce) {
+	0%, 20%, 53%, 80%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+            transition-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+  }
+
+  40%, 43% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -30px, 0);
+            transform: translate3d(0, -30px, 0);
+  }
+
+  70% {
+    -webkit-transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+            transition-timing-function: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+    -webkit-transform: translate3d(0, -15px, 0);
+            transform: translate3d(0, -15px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0,-4px,0);
+            transform: translate3d(0,-4px,0);
+  }
+}
+
+/*
+	EBM Global styles
+*/
+html {
+	&::-webkit-scrollbar { 
+    display: none; 
+	}
+}
+
+body {}
+
+.site-wrapper,
+.site-content {
+	overflow-x: hidden;
+	position: relative;
+}
+
+.header {
+	@include position-fixed-top(1000);
+	@include normalize-text;
+	border-bottom: 1px solid $gray-lightest;
+	background-color: white;
+	.header-left, .header-center, .header-right {
+		@include flex-column-center;
+		height: $header-height-control;
+	}
+	.header-left, .header-right {}
+	.header-left {}
+	.header-center {
+		text-align: center;
+	}
+	.header-right {
+		text-align: right;
+	}
+	.logo { 
+		img {
+			width: $logo-width-control;
+			height: auto;
+		}
+	}
+}
+
+.footer {
+	@include normalize-text;
+	background-color: $gray-dark;
+	.row {
+		> div {
+			@include flex-column-center;
+			min-height: $header-height-control;
+		}
+	}
+}
+
+/* 
+	Hero unit
+*/
+.hero-unit {
+	@include bg-img-block;
+	@include flex-column-space-between;
+	min-height: $hero-unit-height-control;
+	position: relative;
+	overflow: hidden;
+	&.video-bg {
+		overflow: hidden;
+		min-height: $hero-unit-height-control;
+	}
+	.overlay,
+	.hero-unit-pic {
+		@include position(absolute, 0 0 0 0);
+		min-height: $hero-unit-height-control;
+	}
+	.hero-unit-pic {
+		@include bg-img-block-center;
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+$content-block-padding: ($header-height-control + 28);
+$block-height-lg: 95vh;
+$block-height-sm: 5vh;
+.custom-height {
+	@include calc(min-height, "#{$block-height-lg} - #{$content-block-padding * 2}");
+}
+
+.content-block {
+	padding: $content-block-padding 0;
+	min-height: $block-height-lg;
+}
+
+.scroll-down {
+	@include flex-column-center;
+	border-top: 1px solid darken($body-bg, 3%);
+	background-color: darken($body-bg, 1%);
+	min-height: $block-height-sm;
+	text-align: center;
+	&:before {
+		@include animation-iteration-count(infinite);
+	  @include transform-origin(center bottom);
+  	@include animation-fill-mode(both);
+    @include animation-duration(15s);
+		@include animation-name(bounce);
+		font-family: 'icomoon';
+		content: "\e93a";
+	}
+}
+
+
+// Full Height Section
+.fh-section {
+	@include flex-column-space-between;
+	header {
+		margin-bottom: $header-height-control;
+		text-align: center;
+	}
+	article {
+		@include box-shadow-default;
+		border-radius: $border-radius;
+		background-color: white;
+	}
+	.top, .center, .bottom {
+		padding: $container-fluid;
+	}
+	.top {}
+	.center {}
+	.bottom {
+		border-top: 1px solid $gray-lightest;
+		.left, .right {
+			@include flex-column-center;
+			min-height: rem(91px);
+		}
+		.left {
+			color: $gray-light;
+		}
+		ul {
+			@include list-unstyled;
+			padding-right: $container-fluid;
+			li {
+				font-size: $font-size-xs;
+				display: inline-block;
+				&:after {
+					margin-left: 2.5px;
+					content: "·";
+				}
+				&:last-child {
+					&:after {
+						display: none;
+					}
+				}
+			}
+		}
+		.right {
+			text-align: right;
+		}
+	}
+	h6 {
+		@include medium;
+		color: $gray-light;
+	}
+}
+
+
+// Language selection
+.language-select {
+	@include border-left-radius($border-radius);
+	@include position(fixed, 45% 0 null null);
+	@include position-fixed-control(900);
+	ul {
+		@include list-unstyled;
+	}
+	li {
+		a {
+			padding: $container-fluid / 2;
+			background-color: white;
+			display: block;
+			&:hover,
+			&.active-language {
+				@include medium;
+				background-color: $gray-lighter;
+				color: $gray-dark;
+			}
+		}
+		&:first-child {
+			a {
+				border-top-left-radius: $border-radius;
+			}
+		}
+		&:last-child {
+			a {
+				border-bottom-left-radius: $border-radius;
+			}
+		}
+	}
+}
+
+
+// Wordpress boilerplate menus
+.nav-main {
+	@include list-unstyled;
+	li {
+		margin-left: $container-fluid;
+		display: inline-block;
+		&:hover,
+		&.current-menu-item {
+			cursor: pointer;
+			a {
+				text-decoration: underline;
+			}
+		}
+		a {
+			@include medium;
+			font-size: $font-size-h5;
+		}
+	}
+}
+
+
+// Utilities
+[hover-text] {
+	position: relative;
+	&:hover {
+		cursor: pointer;
+		&:after {
+			@include attribute-hover;
+			content: attr(hover-text);
+			display: block;
+		}
+	}
+}
+
+/*
+	Media queries
+*/
+$xl-desktop: 1500px;
+$xxl-desktop: 1980px;
+@media #{$xs-only} {
+	.site-content {
+		.hero-unit {
+			background-image: none !important;
+			text-align: center;
+		}
+	}
+}
+@media #{$sm-only} {}
+@media #{$md-only} {}
+@media #{$lg-only} {}
+@media #{$sm-down} {
+	// Portfolio index
+	#portfolio {
+		li {
+			margin-bottom: rem(21px);
+		}
+	}
+	.site-content {
+		.fh-section {
+			header {
+				margin-bottom: $header-height-control / 2;
+			}
+		}
+	}
+}
+@media #{$md-down} {
+	.site-content {
+	}
+}
+@media #{$lg-down} {}
+@media #{$sm-up} {}
+@media #{$md-up} {}
+@media #{$lg-up} {}
+@media only screen and (min-width: $xl-desktop) {}
+@media only screen and (min-width: $xxl-desktop) {}
