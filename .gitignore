@@ -1,0 +1,117 @@
+# EBM
+# http://soygus.com
+# @author MadeByGus
+
+## EBM
+style.min.css
+style.unprefixed.css
+style.prefixed.css
+
+## Node.js
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+pids
+logs
+results
+npm-debug.log
+node_modules
+
+## Bower
+src/components
+lib
+
+## Images
+app/assets/img/*.jpg
+app/assets/img/*.png
+app/assets/img/*.JPEG
+app/assets/img/*.gif
+app/assets/img/*.tiff
+# src/img/*.jpg
+# src/img/*.png
+# src/img/*.gif
+# src/img/*.JPEG
+# src/img/*.tiff
+
+## Icons
+app/assets/icons/*.svg
+app/assets/icons/*.eot
+app/assets/icons/*.ttf
+app/assets/icons/*.woff
+
+## Sass
+.sass-cache
+
+## OS X
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+## Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# READMES
+HISTORY.md
+OLDREADME.md
+
+## WORDPRESS
+wp-config.php
+wp-content/uploads/**
+## EBM
+wp-content/themes/SoyGus.2016.v2/style.min.css
+wp-content/themes/SoyGus.2016.v2/style.unprefixed.css
+wp-content/themes/SoyGus.2016.v2/style.prefixed.css
+
+## Node.js
+wp-content/themes/SoyGus.2016.v2/lib-cov
+wp-content/themes/SoyGus.2016.v2/*.seed
+wp-content/themes/SoyGus.2016.v2/*.log
+wp-content/themes/SoyGus.2016.v2/*.csv
+wp-content/themes/SoyGus.2016.v2/*.dat
+wp-content/themes/SoyGus.2016.v2/*.out
+wp-content/themes/SoyGus.2016.v2/*.pid
+wp-content/themes/SoyGus.2016.v2/*.gz
+wp-content/themes/SoyGus.2016.v2/pids
+wp-content/themes/SoyGus.2016.v2/logs
+wp-content/themes/SoyGus.2016.v2/results
+wp-content/themes/SoyGus.2016.v2/npm-debug.log
+wp-content/themes/SoyGus.2016.v2/node_modules
+
+## Bower
+wp-content/themes/SoyGus.2016.v2/src/components
+wp-content/themes/SoyGus.2016.v2/lib
+
+## Images
+wp-content/themes/SoyGus.2016.v2/app/assets/img/*.jpg
+wp-content/themes/SoyGus.2016.v2/app/assets/img/*.png
+wp-content/themes/SoyGus.2016.v2/app/assets/img/*.JPEG
+wp-content/themes/SoyGus.2016.v2/app/assets/img/*.gif
+wp-content/themes/SoyGus.2016.v2/app/assets/img/*.tiff
+# wp-content/themes/SoyGus.2016.v2/src/img/*.jpg
+# wp-content/themes/SoyGus.2016.v2/src/img/*.png
+# wp-content/themes/SoyGus.2016.v2/src/img/*.gif
+# wp-content/themes/SoyGus.2016.v2/src/img/*.JPEG
+# wp-content/themes/SoyGus.2016.v2/src/img/*.tiff
+
+## Icons
+wp-content/themes/SoyGus.2016.v2/app/assets/icons/*.svg
+wp-content/themes/SoyGus.2016.v2/app/assets/icons/*.eot
+wp-content/themes/SoyGus.2016.v2/app/assets/icons/*.ttf
+wp-content/themes/SoyGus.2016.v2/app/assets/icons/*.woff
+
+## OLDREADME
+wp-content/themes/SoyGus.2016.v2/HISTORY.md
+wp-content/themes/SoyGus.2016.v2/OLDREADME.md
+
