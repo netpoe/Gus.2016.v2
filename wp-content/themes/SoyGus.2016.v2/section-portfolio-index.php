@@ -10,6 +10,7 @@
 					'category_name' => 'portfolio',
 					'orderby' => 'date',
 					'order'   => 'ASC',
+					'posts_per_page' => -1,
 					);
 				$query = new WP_Query( $args );
 				$count = 0;
