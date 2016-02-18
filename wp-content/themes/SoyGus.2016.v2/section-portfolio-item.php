@@ -22,9 +22,13 @@
 					<div class="top">
 						<h3><a href="<?php the_field('link'); ?>" target="_blank"><?php the_title(); ?></a></h3>
 						<nav>
+<<<<<<< HEAD
 							<?php if ( get_field('tdt') ) : ?>
 							<span hover-text="<?php _e('Total Delivery Time', 'title-total-delivery-time'); ?>">TDT: <?php the_field('tdt'); ?> hrs</span>
 							<?php endif; ?>
+=======
+							<span hover-text="<?php _e('Total Delivery Time', 'title-total-delivery-time'); ?>">TDT: <?php the_field('tdt'); ?> hrs</span>
+>>>>>>> 3bdedb381b907a4bff014ba6d2617c924f0fbfa3
 							<?php if ( get_field('github_link') ) : ?>
 							<span> · </span>
 							<a href="<?php the_field('github_link'); ?>"><?php _e('See on GitHub', 'action-see-on-github'); ?></a>
