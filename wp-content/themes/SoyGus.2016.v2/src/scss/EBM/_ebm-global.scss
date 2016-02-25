@@ -259,6 +259,97 @@ $block-height-sm: 5vh;
 }
 
 
+// Posts index
+.team-wrapper {
+	@include clearfix;
+	.team-item {
+		@include clearfix;
+		float: left;
+		width: 50%;
+		> div {
+			@include flex-row;
+			border-radius: $border-radius;
+			padding: $container-fluid;
+		}
+	}
+	.team-item-pic,
+	.team-item-content {
+		@include box-shadow-default;
+		background-color: white;
+	}
+	.team-item-pic {
+		@include border-left-radius($border-radius);
+		@include bg-img-block-center;
+		min-height: 240px;
+		width: 30%;
+	}
+	.team-item-content {
+		padding: $container-fluid;
+		width: 70%;
+	}
+	.head {
+		@include normalize-text;
+		margin-bottom: $container-fluid;
+	}
+}
+
+.posts-index,
+.posts-show { 
+	padding: ($header-height-control * 2) 0;
+	min-height: 100vh;
+	.team-item {
+		width: 100%;
+	}
+}
+.post {
+	border: 1px solid $gray-lightest;
+	border-radius: $border-radius;
+	margin-bottom: rem(56px);
+	background-color: white;
+	&:hover {
+		@include box-shadow-default;
+	}
+	.head {
+		@include border-top-radius($border-radius);
+		max-height: 350px;
+		overflow: hidden;
+		img {
+			height: auto;
+			width: 100%;
+		}
+	}
+	.body {
+		@include flex-row;
+		> div {}
+	}
+	.left {
+		@include normalize-text;
+		padding: $container-fluid;
+	}
+	.right {}
+	.top, .center, .bottom {
+		padding: $container-fluid;
+	}
+	.top {
+		@include normalize-text;
+	}
+	.center {}
+	.bottom {
+		@include border-bottom-radius($border-radius);
+		border-top: 1px solid $gray-lightest;
+		padding: $container-fluid;
+	}
+	.excerpt {
+		@include medium;
+		border-left: 3px solid $gray-dark;
+		padding-left: $container-fluid;
+		margin-bottom: rem(42px);
+		font-size: $font-size-h5;
+		color: $gray;
+	}
+}
+
+
 // Utilities
 [hover-text] {
 	position: relative;

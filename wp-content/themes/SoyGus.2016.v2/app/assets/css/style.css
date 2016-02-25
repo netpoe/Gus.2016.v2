@@ -24,14 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 @font-face {
-  font-family: 'DINProLight';
-  src: url("../fonts/DINProLight.eot?uawag0");
-  src: url("../fonts/DINProLight.eot?#iefixuawag0") format("embedded-opentype"), url("../fonts/DINProLight.woff?uawag0") format("woff"), url("../fonts/DINProLight.ttf?uawag0") format("truetype"), url("../fonts/DINProLight.svg?uawag0#DINProLight") format("svg");
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-@font-face {
   font-family: 'DINMedium';
   src: url("../fonts/DINMedium.eot?uawag0");
   src: url("../fonts/DINMedium.eot?#iefixuawag0") format("embedded-opentype"), url("../fonts/DINMedium.woff?uawag0") format("woff"), url("../fonts/DINMedium.ttf?uawag0") format("truetype"), url("../fonts/DINMedium.svg?uawag0#DINMedium") format("svg");
@@ -39,10 +31,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.light {
-  font-family: "DINProLight", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
 .book {
   font-family: "DINRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -514,6 +502,152 @@ html::-webkit-scrollbar {
 .nav-main li a {
   font-family: "DINMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.25rem;
+}
+
+.team-wrapper::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.team-wrapper .team-item {
+  float: left;
+  width: 50%;
+}
+.team-wrapper .team-item::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+.team-wrapper .team-item > div {
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 0.25rem;
+  padding: 0.9375rem;
+}
+.team-wrapper .team-item-pic,
+.team-wrapper .team-item-content {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+  box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+  background-color: white;
+}
+.team-wrapper .team-item-pic {
+  border-bottom-left-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-size: cover;
+  background-position: center center;
+  min-height: 240px;
+  width: 30%;
+}
+.team-wrapper .team-item-content {
+  padding: 0.9375rem;
+  width: 70%;
+}
+.team-wrapper .head {
+  margin-bottom: 0.9375rem;
+}
+.team-wrapper .head h1, .team-wrapper .head h2, .team-wrapper .head h3, .team-wrapper .head h4, .team-wrapper .head h5, .team-wrapper .head h6,
+.team-wrapper .head .h1, .team-wrapper .head .h2, .team-wrapper .head .h3, .team-wrapper .head .h4, .team-wrapper .head .h5, .team-wrapper .head .h6,
+.team-wrapper .head h1, .team-wrapper .head h2, .team-wrapper .head h3, .team-wrapper .head h4, .team-wrapper .head h5, .team-wrapper .head h6, .team-wrapper .head p, .team-wrapper .head span, .team-wrapper .head a, .team-wrapper .head em, .team-wrapper .head i, .team-wrapper .head strong, .team-wrapper .head li {
+  margin: 0;
+}
+
+.posts-index,
+.posts-show {
+  padding: 140px 0;
+  min-height: 100vh;
+}
+.posts-index .team-item,
+.posts-show .team-item {
+  width: 100%;
+}
+
+.post {
+  border: 1px solid #F7F7F9;
+  border-radius: 0.25rem;
+  margin-bottom: 3.5rem;
+  background-color: white;
+}
+.post:hover {
+  -webkit-box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+  -moz-box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+  box-shadow: 0px 3px 3px 0px rgba(49, 50, 51, 0.15);
+}
+.post .head {
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  max-height: 350px;
+  overflow: hidden;
+}
+.post .head img {
+  height: auto;
+  width: 100%;
+}
+.post .body {
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-direction: row;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.post .left {
+  padding: 0.9375rem;
+}
+.post .left h1, .post .left h2, .post .left h3, .post .left h4, .post .left h5, .post .left h6,
+.post .left .h1, .post .left .h2, .post .left .h3, .post .left .h4, .post .left .h5, .post .left .h6,
+.post .left h1, .post .left h2, .post .left h3, .post .left h4, .post .left h5, .post .left h6, .post .left p, .post .left span, .post .left a, .post .left em, .post .left i, .post .left strong, .post .left li {
+  margin: 0;
+}
+.post .top, .post .center, .post .bottom {
+  padding: 0.9375rem;
+}
+.post .top h1, .post .top h2, .post .top h3, .post .top h4, .post .top h5, .post .top h6,
+.post .top .h1, .post .top .h2, .post .top .h3, .post .top .h4, .post .top .h5, .post .top .h6,
+.post .top h1, .post .top h2, .post .top h3, .post .top h4, .post .top h5, .post .top h6, .post .top p, .post .top span, .post .top a, .post .top em, .post .top i, .post .top strong, .post .top li {
+  margin: 0;
+}
+.post .bottom {
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-top: 1px solid #F7F7F9;
+  padding: 0.9375rem;
+}
+.post .excerpt {
+  font-family: "DINMedium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border-left: 3px solid #282828;
+  padding-left: 0.9375rem;
+  margin-bottom: 2.625rem;
+  font-size: 1.25rem;
+  color: #55595C;
 }
 
 [hover-text] {
