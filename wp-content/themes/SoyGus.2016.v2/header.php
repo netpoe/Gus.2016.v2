@@ -7,5 +7,9 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<div class="site-wrapper">			
-		<?php get_template_part('nav', 'header'); ?>
+		<div class="site-wrapper">		
+		<?php if (is_front_page()) : ?>	
+			<?php get_template_part('nav', 'header'); ?>
+		<?php else : ?>
+			<?php get_template_part('nav', 'header-inner'); ?>
+		<?php endif; ?>

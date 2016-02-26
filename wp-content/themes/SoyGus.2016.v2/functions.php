@@ -6,6 +6,7 @@
 		register_nav_menus(
 			array( 
 				'main-menu' => __('Main Menu'),
+				'main-menu-inner' => __('Main Menu Inner'),
 				'post-categories' => __('Post categories')
 			)
 		);
