@@ -116,9 +116,9 @@ wp-content/themes/SoyGus.2016.v2/HISTORY.md
 wp-content/themes/SoyGus.2016.v2/OLDREADME.md
 
 # BUILD
-# wp-content/themes/twentysixteen
-# wp-content/themes/SoyGus.2016.v2/src/
-# wp-content/themes/SoyGus.2016.v2/Gruntfile.js
-# wp-content/themes/SoyGus.2016.v2/bower.json
-# wp-content/themes/SoyGus.2016.v2/.bowerrc
-# wp-content/themes/SoyGus.2016.v2/package.json
+wp-content/themes/twentysixteen
+wp-content/themes/SoyGus.2016.v2/src/
+wp-content/themes/SoyGus.2016.v2/Gruntfile.js
+wp-content/themes/SoyGus.2016.v2/bower.json
+wp-content/themes/SoyGus.2016.v2/.bowerrc
+wp-content/themes/SoyGus.2016.v2/package.json
